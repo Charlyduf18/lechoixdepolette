@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que veux-tu manger ce soir ?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .question {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .options button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">
+        <p>Mon siniou, que veux-tu manger ce soir ?</p>
+    </div>
+    <div class="options">
+        <button onclick="mauvaiseReponse()">Des sushis</button>
+        <button onclick="bonneReponse()">Ma siflouille</button>
+    </div>
+    
+    <div id="reponse" style="display: none; margin-top: 20px;"></div>
+
+    <script>
+        function mauvaiseReponse() {
+            document.getElementById('reponse').style.display = 'block';
+            document.getElementById('reponse').innerText = "Mauvaise réponse.";
+        }
+
+        function bonneReponse() {
+            document.getElementById('reponse').style.display = 'block';
+            document.getElementById('reponse').innerText = "Je t'attends ma coquine.";
+        }
+    </script>
+</body>
+</html>
