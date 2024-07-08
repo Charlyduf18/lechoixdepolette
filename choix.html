@@ -20,10 +20,6 @@
             margin: 10px;
             cursor: pointer;
         }
-        #reponse {
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
@@ -35,14 +31,16 @@
         <button onclick="bonneReponse()">Ma siflouille</button>
     </div>
     
-    <div id="reponse"></div>
+    <div id="reponse" style="display: none; margin-top: 20px;"></div>
 
     <script>
         function mauvaiseReponse() {
+            document.getElementById('reponse').style.display = 'block';
             document.getElementById('reponse').innerText = "Mauvaise réponse.";
         }
 
         function bonneReponse() {
+            document.getElementById('reponse').style.display = 'block';
             document.getElementById('reponse').innerText = "Je t'attends ma coquine.";
         }
     </script>
